@@ -1,0 +1,138 @@
+@max767: ~"(max-width: 767px)";
+@min768: ~"(min-width: 768px)";
+@max1024: ~"(max-width: 1024px)";
+@min1025: ~"(min-width: 1025px)";
+
+.footer{
+    background-color: var(--description-color);
+
+    &__inner{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 58px 0 55px;
+        max-width: 1440px;
+        margin: auto;
+
+        @media @max1024 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 80px;
+        }
+
+        @media @max767 {
+            display: flex;
+            flex-direction: column;
+            padding: 25px 0 46px;
+            align-items: center;
+            margin: 0 30px;
+        }
+    }
+
+    &-one{
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        
+        @media @min1025 {
+            max-width: 442px;
+        }
+
+        @media @max1024 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            margin-bottom: 50px;
+        }
+
+        @media @max767 {
+            flex-direction: column;
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .footer-wn-logo{
+            cursor: pointer;
+        }
+
+        .footer-info{
+            display: flex;
+            gap: 35px;
+
+            @media @max1024 {
+                padding-right: 40px;
+            }
+
+            @media @max767 {
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-link-list{
+                font-size: 13px;
+                opacity: 0.5;
+                cursor: pointer;
+                color: var(--primary-color);
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-two{
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media @max767 {
+            margin-bottom: 35px;
+        }
+
+        &-in{
+            height: 40px;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            background: transparent;
+            padding-left: 20px;
+        }
+
+        &-desc{
+            color: #CBD0D3;
+            font-size: 11px;
+        }
+    }
+
+    &-three{
+        max-width: 160px;
+        display: flex;
+        gap: 32px;
+
+        @media @max1024 {
+            margin-top: 10px;
+            justify-self: end;
+        }
+        .footer-social{
+            width: 16px;
+            height: 16px;
+
+            &-image{
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                transition: 0.5s all;
+                &:hover{
+                    filter: invert(100%);
+                }
+            }
+        }
+    }
+}
+

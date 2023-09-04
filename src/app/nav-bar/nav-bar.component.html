@@ -1,0 +1,48 @@
+<nav class="nav-bar">
+    <div class="nav-bar__inner">
+        <div class="nav-bar-menu">
+            <img src="../../assets/menu.png" alt="menu" class="menu-img" *ngIf="menu" (click)="menuOpen()">
+            <img src="../../assets/close-menu.png" alt="menu" class="menu-img" *ngIf="menuClose" (click)="menuOpen()">
+        </div>
+        <div class="nav-bar-left">
+            <img src="../../assets/logo.svg" alt="logo-image" class="nav-bar-left-logo">
+        </div>
+        <div class="nav-bar-right">
+            <ul class="nav-bar-right-list"  [ngClass]="{'is-open': istoggled}">
+                <li class="nav-bar-right-list-list">HOME</li>
+                <li class="nav-bar-right-list-list" (click)="navOpen()" >DISCOVERY</li>
+                <div class="popup" *ngIf="popMenu">
+                    <hr class="phone-line">
+                    <div class="popup__inner">
+                        <div class="popup-top">
+                            <div class="popup-top__inner" *ngFor="let t of popupTopTitle">
+                                <h3 class="popup-top-title">{{t.title}}</h3>
+                                <ul class="popup-top-list">
+                                    <li class="popup-top-list-list">{{t.l1}}</li>
+                                    <li class="popup-top-list-list">{{t.l2}}</li>
+                                    <li class="popup-top-list-list">{{t.l3}}</li>
+                                    <li class="popup-top-list-list">{{t.l4}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="desk-top-line">
+                        <div class="popup-bottom">
+                            <p>If you are interested in reserving tickets for special events, <span class="tb">please contact us.</span></p>
+                            <div class="popup-bottom-social">
+                                <img src="../../assets/facebook.png" alt="fa" class="sm-image">
+                                <img src="../../assets/twitter.png" alt="tw" class="sm-image">
+                                <img src="../../assets/linkedin.png" alt="ln" class="sm-image">
+                                <img src="../../assets/pinterest.png" alt="pi" class="sm-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <li class="nav-bar-right-list-list">PHOTOS</li>
+                <li class="nav-bar-right-list-list" (click)="navOpen()">CONTACT</li>
+            </ul>
+            <img src="../../assets/christopher-campbell-28567-unsplash.svg" alt="account-image" class="nav-bar-right-image">
+        </div>
+        
+    </div>
+</nav>
+

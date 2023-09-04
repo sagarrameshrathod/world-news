@@ -1,0 +1,88 @@
+<div class="wn-info">
+    <div class="wn-info__inner">
+        <div class="wn-info-one">
+            <div class="trending">
+                <h2 class="trending-name">TRENDING</h2>
+                <div class="trending-slids slides-main">
+                    <div class="trending-slides-l slides-button">
+                        <img src="../../assets/Arrow 4.svg" alt="arrow" class="arrow-icon t-arrow-l">
+                    </div>
+                    <div class="trending-slides-r slides-button">
+                        <img src="../../assets/Arrow 4.svg" alt="arrow" class="arrow-icon t-arrow-r srr">
+                    </div>
+                </div>
+            </div>
+            <div class="trending-details">
+                <div class="td-card" *ngFor="let t of trending">
+                    <img src="{{t.imgUrl}}" alt="image" class="td-card-image">
+                    <div class="td-card__inner">
+                        <h3 class="td-card-title">{{t.title}}</h3>
+                        <p class="td-card-description">{{t.desc}}</p>
+                        <div class="td-card-time">
+                           <img src="../../assets/Time_icon.svg" alt="time-icon" class="td-card-time-icon">
+                           <span class="td-card-time-info">{{t.time}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wn-info-two">
+            <div class="hn">
+                <h2 class="hn-name">HAPPENING NOW</h2>
+                <div class="hn-slids slides-main">
+                    <div class="hn-s-l">
+                        <div class="hn-slids-l slides-button">
+                            <img src="../../assets/Arrow 4.svg" alt="arrow" class="arrow-icon hn-arrow-l">
+                        </div>
+                    </div>
+                    <div class="hn-s-r">
+                        <div class="hn-slids-r slides-button">
+                            <img src="../../assets/Arrow 4.svg" alt="arrow" class="arrow-icon hn-arrow-r srr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hn-details">
+                <div class="hn-details-one">
+                    <div class="hn-do-card" *ngFor="let one of hn_one">
+                        <img src="{{one.imgUrl}}" alt="image" class="hn-do-card-image">
+                        <div class="hn-do-card-content">
+                            <div class="hn-do-card-content-one">
+                                <h3 class="hn-do-card-content-city">{{one.name}}</h3>
+                            </div>
+                            <div class="hn-do-card-content-two">
+                                <h3 class="hn-do-card-content-title">{{one.title}}</h3>
+                                <p class="hn-do-card-content-description">{{one.desc}}</p>
+                                <div class="hn-do-card-content-time">
+                                  <img src="../../assets/Time_icon.svg" alt="time-icon">
+                                  <span>{{one.time}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hn-details-two">
+                    <div class="hn-dt-card" *ngFor="let two of hn_two">
+                        <img src="{{two.imgUrl}}" alt="image" class="hn-dt-card-image">
+                        <h3 class="hn-dt-card-title">{{two.title}}</h3>
+                        <div class="hn-dt-card-time">
+                            <img src="../../assets/Time_icon.svg" alt="time-icon">
+                            <p class="time-desc">{{two.time}} by <span class="news">{{two.news}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wn-info-three">
+            <div class="mi" *ngFor="let lm of l_more">
+                <img src="{{lm.imgUrl}}" alt="image" class="mi-image">
+                <h3 class="mi-title">{{lm.title}}</h3>
+                <p class="mi-description">{{lm.desc}}</p>
+                <div class="mi-link">
+                    <a class="a-link">Learn More</a>
+                    <img src="../../assets/arrow_right.png" alt="arrow" class="mi-link-arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
